@@ -1,6 +1,6 @@
 {
   "name": "@webverse-tech/feedget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FeedGet: Feedback Widget component",
   "author": "Beatriz Paixão () <biaperon2001@gmail.com>",
   "main": "dist/index.js",
