@@ -1,8 +1,26 @@
 {
-  "name": "feedback-widget",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@webverse-tech/feedget",
+  "version": "1.0.0",
+  "description": "FeedGet: Feedback Widget component",
+  "author": "Beatriz Paixão () <biaperon2001@gmail.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "feedget",
+    "feedback",
+    "widget"
+  ],
+  "homepage": "",
+  "repository": {
+    "url": "https://github.com/biiah-paixao/feedback-widget",
+    "type": "git"
+  },
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -20,6 +38,7 @@
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/forms": "^0.5.9",
+    "@types/node": "^22.5.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
