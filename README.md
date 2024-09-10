@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
+# 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">
+  Feedget - Feedback Widget | ReactJS
+</h1>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#-recursos">Recursos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação">Instalação</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
 
-## Expanding the ESLint configuration
+**Feedget** é um widget de feedback que permite aos usuários enviar mensagens diretamente para um canal do Discord. Este widget é fácil de configurar e não requer backend. Basta conectar a URL do webhook do Discord para começar a receber feedbacks em seu canal.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<img src="cover.png" width="100%" >
 
-- Configure the top-level `parserOptions` property like this:
+## 💣 Recursos
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Configuração Simples:** Envie feedbacks diretamente para o Discord com apenas um webhook.
+- **Sem Backend Necessário:** Funciona totalmente no frontend, sem necessidade de servidor.
+- **Personalização:** Customize o widget de acordo com suas necessidades:
+  - **Cores:** Altere as cores do widget para combinar com o design do seu site.
+  - **Tema:** Escolha entre temas claro e escuro.
+  - **Tamanho do Botão:** Ajuste o tamanho do botão de feedback para se adequar ao layout.
+  - **Campos Adicionais:** Adicione campos opcionais para nome e/ou e-mail.
+- **Demo Disponível:** Experimente o widget antes de implementar em seu projeto.
+
+
+## 💻 Demo
+Para testar o widget antes de integrá-lo ao seu projeto, visite nossa [demo](https://webverse-tech-feedget.vercel.app/).
+
+<br/>
+
+## Instalação
+
+Você pode instalar o pacote `feedget` usando npm:
+
+```bash
+npm install @webverse-tech/feedget
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Ou se preferir usar yarn:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+yarn add @webverse-tech/feedget
 ```
+
+## Configuração
+
+1. **Obtenha o Webhook do Discord:**
+   - Vá para seu servidor Discord e crie um webhook no canal onde você deseja receber os feedbacks.
+   - Copie a URL do webhook.
+
+2. **Configure o Widget:**
+   - Importe e configure o widget em seu projeto. Use a URL do webhook para conectar o widget ao seu canal do Discord.
+
+   ```javascript
+   import Feedget from '@webverse-tech/feedget';
+
+   function App() {
+     return (
+       <div>
+         <Feedget discordWebhookUrl="SUA_URL_DO_WEBHOOK_AQUI" />
+       </div>
+     );
+   }
+
+   export default App;
+   ```
+
+   Substitua `"SUA_URL_DO_WEBHOOK_AQUI"` pela URL do webhook do Discord que você obteve.
+
+
+
+## Opções de Personalização
+
+Customize o widget de acordo com suas necessidades. Veja as opções abaixo:
+
+  | Opção            | Descrição                                         | type             | default        | accept                                         |
+  |------------------|---------------------------------------------------|------------------|----------------|------------------------------------------------|
+  | `themeColor`     | Altere a cor de destaque.                         | string           | '#8257e6'      | Cores em formato hexadecimal (ex: `#8257e6`)   |
+  | `textColor`      | Altere a cor do texto.                            | string           | '#ffffff'      | Cores em formato hexadecimal (ex: `#000000`)   |
+  | `size`           | Ajuste o tamanho do botão de feedback.            | string           | 'medium'       | `"small"`, `"medium"`, `"large"`               |
+  | `theme`          | Escolha entre temas claro e escuro.               | string           |  dark'         | `"dark"` ou `"light"`                          |
+  | `isEnabledName`  | Adicione um campo opcional para nome.             | boolean          |  `false`       |                                                |
+  | `isEnabledEmail` | Adicione um campo opcional para e-mail.           | boolean          |  `false`       |                                                |
+  
+<br/>
+
+## 🧪 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [ReactJS](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+## Contribuição
+
+Se você deseja contribuir para o desenvolvimento do feedget, sinta-se à vontade para abrir issues e pull requests. Estamos abertos a melhorias e sugestões!
+
+## Licença
+
+Este projeto está licenciado sob a licença ISC. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+> [!NOTE]  
+> Este projeto foi aprimorado a partir da NLW #8, evento da Rocketseat
+---
+
+<h4 align="center"> Feito com ♥ por Beatriz Paixão (gurianaweb) </h4>
