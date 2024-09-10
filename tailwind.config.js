@@ -14,13 +14,23 @@ export default {
         'on-brand': {
           100: 'var(--feedget-text-on-brand)',
         },
+        surface: {
+          primary: 'var(--feedget-surface-primary)',
+          secondary: 'var(--feedget-surface-secondary)',
+          secondaryHover: 'var(--feedget-secondary-hover)',
+        },
+        stroke: 'var(--feedget-stroke)',
+        text: {
+          primary: 'var(--feedget-text-primary)',
+          secondary: 'var(--feedget-text-secondary)',
+        },
       },
       borderRadius: {
         md: '4px'
       }
     },
   },
-  plugins: [ 
+  plugins: [
     require('@tailwindcss/forms'),
     require('tailwind-scrollbar'),
   ],

@@ -24,7 +24,7 @@ export function ScreenshotButton({ onScreenshotTook, screenshot }: SheenshotButt
       <button
         type='button'
         onClick={() => onScreenshotTook(null)}
-        className='p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors'
+        className='p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-text-secondary hover:text-text-primary transition-colors'
         style={{
           backgroundImage: `url(${screenshot})`,
           backgroundPosition: 'right bottom',
@@ -40,7 +40,7 @@ export function ScreenshotButton({ onScreenshotTook, screenshot }: SheenshotButt
     <button
       type='button'
       onClick={handleTakeScreenshot}
-      className='p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors'>
+      className='p-2 bg-surface-secondary rounded-md border-transparent hover:bg-secondary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface-primary focus:ring-brand-500 transition-colors'>
       {isTakingScreenshot ? <Loading /> : <Camera className='w-6 h-6' />}
     </button>
   )

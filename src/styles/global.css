@@ -1,7 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.widget {
-  @apply bg-[#09090A] text-zinc-100;
-}
