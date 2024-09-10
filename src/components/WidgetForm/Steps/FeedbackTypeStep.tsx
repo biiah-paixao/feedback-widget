@@ -1,4 +1,4 @@
-import { FeedbackType, feedbackTypes } from '..'
+import { FeedbackType, feedbackTypes } from '../../../constants/feedbackTypes';
 import { CloseButton } from '../../CloseButton';
 
 interface FeedbackTypeStepProps {

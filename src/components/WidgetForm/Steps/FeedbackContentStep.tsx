@@ -1,5 +1,5 @@
-import { ArrowLeft } from '@phosphor-icons/react'
-import { FeedbackType, feedbackTypes } from '..'
+import { ArrowLeft } from '@phosphor-icons/react';
+import { FeedbackType, feedbackTypes } from '../../../constants/feedbackTypes';
 import { CloseButton } from '../../CloseButton'
 import { ScreenshotButton } from '../ScreenshotButton';
 import { FormEvent, useState } from 'react';
